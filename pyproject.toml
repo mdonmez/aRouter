@@ -4,4 +4,10 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "instructor>=1.8.3",
+    "litellm>=1.70.4",
+    "orjson>=3.10.18",
+    "pydantic>=2.11.4",
+    "python-dotenv>=1.1.0",
+]

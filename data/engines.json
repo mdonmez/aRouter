@@ -1,0 +1,29 @@
+{
+	"meta_user_notes": null,
+	"engines": {
+		"google_search": {
+			"description": "Google Search is a versatile, general-purpose search engine suitable for a wide range of queries, from simple facts to complex research. It provides comprehensive results, including web pages, images, news, and scholarly articles. Ideal for broad searches, local information, or when diverse result types are needed. Supports advanced search operators (e.g., quotes, -, +) for precise query refinement.",
+			"engine_url": "https://www.google.com/search?q=%s",
+			"query_modifiable": true,
+			"supports_search_operator": true,
+			"user_notes": null,
+			"priority": "medium"
+		},
+		"perplexity": {
+			"description": "Perplexity is an AI-powered search engine designed for direct, concise answers to specific questions. It leverages natural language processing to provide summarized responses with source citations, making it ideal for factual queries, quick insights, or when users prefer brief, synthesized information over extensive web results. Supports query reformulation for clarity and focus.",
+			"engine_url": "https://www.perplexity.ai/search?q=%s",
+			"query_modifiable": true,
+			"supports_search_operator": true,
+			"user_notes": null,
+			"priority": "medium"
+		},
+		"first_result": {
+			"description": "This is a special engine that directly redirects to the first result from a search query. It is so suitable when user entered a single-word query and wants to go to the first result. (Like youtube, netflix, amazon etc.)",
+			"engine_url": "https://duckduckgo.com/?q=%5C%s%3A",
+			"query_modifiable": true,
+			"supports_search_operator": false,
+			"user_notes": null,
+			"priority": "high"
+		}
+	}
+}

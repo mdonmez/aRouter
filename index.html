@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulsing Circle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+
+        .pulse-circle {
+            animation: pulse 0.7s infinite;
+        }
+    </style>
+</head>
+<body class="bg-[#141517] min-h-screen flex items-center justify-center">
+    <div class="pulse-circle w-20 h-20 rounded-full bg-white"></div>
+</body>
+</html>
