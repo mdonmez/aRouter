@@ -1,5 +1,5 @@
 {
-	"meta_user_notes": null,
+	"meta_user_notes": "Search engines configuration with detailed descriptions and settings. Priority levels: high (frequently used), medium (general purpose), low (specialized).",
 	"engines": {
 		"google_search": {
 			"description": "Google Search is a versatile, general-purpose search engine suitable for a wide range of queries, from simple facts to complex research. It provides comprehensive results, including web pages, images, news, and scholarly articles. Ideal for broad searches, local information, or when diverse result types are needed. Supports advanced search operators (e.g., quotes, -, +) for precise query refinement.",
@@ -7,23 +7,95 @@
 			"query_modifiable": true,
 			"supports_search_operator": true,
 			"user_notes": null,
-			"priority": "medium"
+			"priority": "high"
 		},
-		"perplexity": {
-			"description": "Perplexity is an AI-powered search engine designed for direct, concise answers to specific questions. It leverages natural language processing to provide summarized responses with source citations, making it ideal for factual queries, quick insights, or when users prefer brief, synthesized information over extensive web results. Supports query reformulation for clarity and focus.",
-			"engine_url": "https://www.perplexity.ai/search?q=%s",
+		"bing": {
+			"description": "Microsoft's search engine that provides comprehensive web search results with a clean interface. Excels in visual search, video results, and local business information. Features include search history integration with Microsoft account, rewards program, and strong image search capabilities. Good alternative when Google results need cross-verification.",
+			"engine_url": "https://www.bing.com/search?q=%s",
 			"query_modifiable": true,
 			"supports_search_operator": true,
 			"user_notes": null,
+			"priority": "high"
+		},
+		"chatgpt": {
+			"description": "OpenAI's conversational AI that provides detailed, contextual responses to natural language queries. Best for complex questions requiring explanations, creative content generation, coding help, and in-depth analysis. Excels at understanding context and maintaining conversation flow. Note: May not have real-time information unless using web browsing capabilities.",
+			"engine_url": "https://chatgpt.com/?q=%s",
+			"query_modifiable": true,
+			"supports_search_operator": false,
+			"user_notes": "Requires login for full functionality. Free tier available with limitations.",
+			"priority": "high"
+		},
+		"duckduckgo": {
+			"description": "Privacy-focused search engine that doesn't track user activity. Provides clean, straightforward search results with strong privacy protection. Features !bangs for direct site searches and instant answers. Ideal for users concerned about privacy or when searching for information that might be filtered or personalized by other engines.",
+			"engine_url": "https://duckduckgo.com/?q=%s",
+			"query_modifiable": true,
+			"supports_search_operator": true,
+			"user_notes": "Uses !bangs for direct site searches (e.g., !w for Wikipedia)",
+			"priority": "medium"
+		},
+		"brave_search": {
+			"description": "Privacy-preserving search engine with its own index. Provides independent search results without tracking or profiling. Features include discussions, news, and web results in separate tabs. Good for users who want an alternative to major search engines while maintaining result quality.",
+			"engine_url": "https://search.brave.com/search?q=%s",
+			"query_modifiable": true,
+			"supports_search_operator": true,
+			"user_notes": "Part of the Brave browser ecosystem but works independently",
+			"priority": "medium"
+		},
+		"perplexity": {
+			"description": "AI-powered search engine that provides direct, well-sourced answers to questions. Combines web search with AI summarization, citing sources for verification. Excellent for research, technical queries, and getting concise overviews of complex topics. Features include thread organization and source citation.",
+			"engine_url": "https://www.perplexity.ai/search?q=%s",
+			"query_modifiable": true,
+			"supports_search_operator": true,
+			"user_notes": "Free tier available with daily limits",
+			"priority": "medium"
+		},
+		"youtube": {
+			"description": "Specialized search for video content. Ideal for tutorials, music, reviews, and visual demonstrations. Features include filters for upload date, duration, and result type. The second most popular search engine globally, particularly valuable for visual and audio content.",
+			"engine_url": "https://www.youtube.com/results?search_query=%s",
+			"query_modifiable": true,
+			"supports_search_operator": true,
+			"user_notes": "Requires login for age-restricted content and personalized results",
+			"priority": "high"
+		},
+		"github": {
+			"description": "Specialized search for code repositories and developer resources. Excellent for finding open-source projects, code examples, and developer documentation. Supports advanced search syntax for filtering by language, repository size, and more. Essential for software development and technical research.",
+			"engine_url": "https://github.com/search?q=%s&type=repositories",
+			"query_modifiable": true,
+			"supports_search_operator": true,
+			"user_notes": "Advanced search syntax available for precise filtering",
+			"priority": "medium"
+		},
+		"wikipedia": {
+			"description": "Free, community-edited online encyclopedia. Best for factual information, historical context, and general knowledge. Articles include references and are generally well-sourced. Good starting point for research, though should be verified with primary sources for academic work.",
+			"engine_url": "https://en.wikipedia.org/w/index.php?search=%s",
+			"query_modifiable": true,
+			"supports_search_operator": true,
+			"user_notes": "Available in multiple languages - change 'en' in URL for other languages",
 			"priority": "medium"
 		},
 		"first_result": {
-			"description": "This is a special engine that directly redirects to the first result from a search query. It is so suitable when user entered a single-word query and wants to go to the first result. (Like youtube, netflix, amazon etc.)",
+			"description": "Special engine that directly redirects to the first result from a search query. Ideal for single-word queries targeting specific websites (e.g., 'youtube', 'netflix', 'amazon'). Saves time when you want to go directly to the most relevant result rather than seeing search results.",
 			"engine_url": "https://duckduckgo.com/?q=%5C%s%3A",
 			"query_modifiable": true,
 			"supports_search_operator": false,
-			"user_notes": null,
+			"user_notes": "Works best with single-word, well-known domain names",
 			"priority": "high"
+		},
+		"arxiv": {
+			"description": "Specialized search for academic papers and scientific research. Contains preprints in physics, mathematics, computer science, and other academic disciplines. Excellent for cutting-edge research, though papers may not be peer-reviewed. Includes advanced search options for authors, dates, and categories.",
+			"engine_url": "https://arxiv.org/search/?query=%s&searchtype=all&source=header",
+			"query_modifiable": true,
+			"supports_search_operator": true,
+			"user_notes": "Primarily for academic and scientific research papers",
+			"priority": "low"
+		},
+		"amazon": {
+			"description": "E-commerce focused search for products across numerous categories. Features include customer reviews, price comparisons, and filtering options. Ideal for product research, price checking, and online shopping. Shows availability, shipping options, and seller ratings.",
+			"engine_url": "https://www.amazon.com/s?k=%s",
+			"query_modifiable": true,
+			"supports_search_operator": true,
+			"user_notes": "Results may vary by region - change domain for local versions",
+			"priority": "medium"
 		}
 	}
 }
