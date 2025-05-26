@@ -1,5 +1,5 @@
 {
-	"meta_user_notes": "Search engines configuration with detailed descriptions and settings. Priority levels: high (frequently used), medium (general purpose), low (specialized).",
+	"meta_user_notes": "Search engines configuration with detailed descriptions and settings. Priority levels: very high (priority frequently used), high (frequently used), medium (general purpose), low (specialized).",
 	"engines": {
 		"google_search": {
 			"description": "Google Search is a versatile, general-purpose search engine suitable for a wide range of queries, from simple facts to complex research. It provides comprehensive results, including web pages, images, news, and scholarly articles. Ideal for broad searches, local information, or when diverse result types are needed. Supports advanced search operators (e.g., quotes, -, +) for precise query refinement.",
@@ -47,7 +47,7 @@
 			"query_modifiable": true,
 			"supports_search_operator": true,
 			"user_notes": "Free tier available with daily limits",
-			"priority": "medium"
+			"priority": "very high"
 		},
 		"youtube": {
 			"description": "Specialized search for video content. Ideal for tutorials, music, reviews, and visual demonstrations. Features include filters for upload date, duration, and result type. The second most popular search engine globally, particularly valuable for visual and audio content.",

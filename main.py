@@ -68,7 +68,7 @@ class QueryModel(BaseModel):
 
 
 client = instructor.from_litellm(completion)
-original_query = "new york times"
+original_query = "how does an llm works use perplexity"
 
 response = client.chat.completions.create(
     model="groq/llama-3.3-70b-versatile",
